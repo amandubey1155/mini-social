@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Social</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Mini Social</h1>
+    <div id="auth-area"></div>
+  </header>
+
+  <main>
+    <section id="auth-section" class="card">
+      <h2>Login or Register</h2>
+
+      <input id="username" placeholder="Username" />
+      <input id="password" type="password" placeholder="Password" />
+      <textarea id="bio" placeholder="Optional bio"></textarea>
+
+      <div class="row">
+        <button onclick="register()">Register</button>
+        <button onclick="login()">Login</button>
+      </div>
+      <p id="auth-message"></p>
+    </section>
+
+    <section id="feed-section" class="hidden">
+      <div class="card">
+        <h2>Create Post</h2>
+        <textarea id="post-content" placeholder="What's happening?"></textarea>
+        <button onclick="createPost()">Post</button>
+      </div>
+
+      <div class="card">
+        <h2>Feed</h2>
+        <div id="posts"></div>
+      </div>
+    </section>
+
+    <section id="profile-section" class="hidden">
+      <div class="card" id="profile-card"></div>
+      <div class="card">
+        <h2>Posts</h2>
+        <div id="profile-posts"></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
